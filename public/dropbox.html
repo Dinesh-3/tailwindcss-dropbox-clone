@@ -11,20 +11,31 @@
         .visibility {
             display: block;
         }
+
         @media only screen and (max-width:800px) {
             .hide-1 {
                 display: none;
             }
+
             .main-menu {
                 flex-direction: row;
             }
         }
+
         @media only screen and (min-width:800px) {
             .hide-2 {
                 display: none;
             }
         }
+
         .hide {
+            display: none;
+        }
+
+        .drop-down-container:hover .drop-down{
+            display: block;
+        } 
+        .drop-down {
             display: none;
         }
     </style>
@@ -32,17 +43,122 @@
 
 <body>
     <div class="content">
-        <div class="main-menu flex flex-col justify-around items-center py-5 border md:flex-row fixed w-full bg-white">
+        <div class="main-menu flex flex-col justify-around items-center border md:flex-row fixed w-full bg-white">
             <div class="flex justify-center items-center space-x-2">
                 <img class="w-10" src="./images/dropbox_logo.svg" alt="logo" srcset="">
                 <h1 class="font-bold text-lg">Dropbox</h1>
             </div>
-            <ul class="hide-1 flex space-x-2">
-                <li>Why Dropbox?</li>
-                <li>Features</li>
-                <li>Plans & Pricing</li>
+            <ul class="hide-1 flex space-x-4">
+                <li class="drop-down-container">
+                    <h1 class="cursor-pointer py-5 border-gray-100 border-b-2 hover:border-black ">Why Dropbox?</h1>
+                    <div class="drop-down absolute p-10 bg-white border top-4/4">
+                        <ul class="flex justify-around items-start space-x-5">
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">Overview</h1>
+                                <ul>
+                                    <li><a href="">Customer stories</a></li>
+                                    <li><a href="">How we integrate</a></li>
+                                    <li><a href="">Smart workspace</a></li>
+                                    <li><a href="">Do more than store</a></li>
+                                </ul>
+                            </li>
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">By industry</h1>
+                                <ul>
+                                    <li><a href="">Education</a></li>
+                                    <li><a href="">Media</a></li>
+                                    <li><a href="">Construction</a></li>
+                                    <li><a href="">Retail</a></li>
+                                    <li><a href="">Technology</a></li>
+                                </ul>
+                            </li>
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">By user type</h1>
+                                <ul>
+                                    <li><a href="">Personal</a></li>
+                                    <li><a href="">Family</a></li>
+                                    <li><a href="">Freelancers</a></li>
+                                    <li><a href="">Teams</a></li>
+                                    <li><a href="">Enterprise</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="drop-down-container">
+                    <h1 class="cursor-pointer py-5 border-gray-100 border-b-2 hover:border-black ">Features</h1>
+                    <div class="drop-down absolute p-10 bg-white border top-4/4">
+                        <ul class="flex justify-around items-start space-x-5">
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">Overview</h1>
+                                <ul>
+                                    <li><a href="">Customer stories</a></li>
+                                    <li><a href="">How we integrate</a></li>
+                                    <li><a href="">Smart workspace</a></li>
+                                    <li><a href="">Do more than store</a></li>
+                                </ul>
+                            </li>
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">By industry</h1>
+                                <ul>
+                                    <li><a href="">Education</a></li>
+                                    <li><a href="">Media</a></li>
+                                    <li><a href="">Construction</a></li>
+                                    <li><a href="">Retail</a></li>
+                                    <li><a href="">Technology</a></li>
+                                </ul>
+                            </li>
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">By user type</h1>
+                                <ul>
+                                    <li><a href="">Personal</a></li>
+                                    <li><a href="">Family</a></li>
+                                    <li><a href="">Freelancers</a></li>
+                                    <li><a href="">Teams</a></li>
+                                    <li><a href="">Enterprise</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="drop-down-container">
+                    <h1 class="cursor-pointer py-5 border-gray-100 border-b-2 hover:border-black ">Plans & Pricing</h1>
+                    <div class="drop-down absolute p-10 bg-white border top-4/4">
+                        <ul class="flex justify-around items-start space-x-5">
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">Overview</h1>
+                                <ul>
+                                    <li><a href="">Customer stories</a></li>
+                                    <li><a href="">How we integrate</a></li>
+                                    <li><a href="">Smart workspace</a></li>
+                                    <li><a href="">Do more than store</a></li>
+                                </ul>
+                            </li>
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">By industry</h1>
+                                <ul>
+                                    <li><a href="">Education</a></li>
+                                    <li><a href="">Media</a></li>
+                                    <li><a href="">Construction</a></li>
+                                    <li><a href="">Retail</a></li>
+                                    <li><a href="">Technology</a></li>
+                                </ul>
+                            </li>
+                            <li class="space-y-3">
+                                <h1 class="font-bold text-lg border-b border-black">By user type</h1>
+                                <ul>
+                                    <li><a href="">Personal</a></li>
+                                    <li><a href="">Family</a></li>
+                                    <li><a href="">Freelancers</a></li>
+                                    <li><a href="">Teams</a></li>
+                                    <li><a href="">Enterprise</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-            <ul class="hide-1 flex space-x-2">
+            <ul class="hide-1 flex space-x-4">
                 <li>Support</li>
                 <li>Contact sales</li>
                 <li>Sign in</li>
@@ -52,10 +168,12 @@
         </div>
         <div class="bg-blue-200 space-y-5 pt-40 px-5 md:pt-32">
             <h1 class="font-bold text-5xl text-red-900">Everything you need for work, all in one place</h1>
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2">
                 <div class="flex flex-col space-y-5">
-                    <p>Finally now all your tools, content, and collaborators are accessible from the same place. Dropbox
-                        Business is more than secure storage—it's a smart, seamless way to optimize your existing workflow.
+                    <p>Finally now all your tools, content, and collaborators are accessible from the same place.
+                        Dropbox
+                        Business is more than secure storage—it's a smart, seamless way to optimize your existing
+                        workflow.
                     </p>
                     <a href="#" class="bg-blue-600 text-white py-2 px-4 hover:bg-blue-500 self-start">Start your free
                         trial</a>
@@ -88,14 +206,17 @@
                         <h2 class="font-bold text-lg">$19.99</h2>
                         <p class="text-gray-500">/ month</p>
                         <ul class="flex flex-col space-y-2">
-                            <p class="flex space-x-2"><img src="./images/profile.svg" alt="" srcset=""> <span>1 user</span>
+                            <p class="flex space-x-2"><img src="./images/profile.svg" alt="" srcset=""> <span>1
+                                    user</span>
                             </p>
-                            <p class="flex space-x-2"><img src="./images/folder.svg" alt="" srcset=""> <span>3 TB of secure
+                            <p class="flex space-x-2"><img src="./images/folder.svg" alt="" srcset=""> <span>3 TB of
+                                    secure
                                     storage</span></p>
                             <p class="flex space-x-2"><img src="./images/pen.svg" alt="" srcset=""> <span>Premium
                                     productivity features and simple, secure file sharing</span></p>
                         </ul>
-                        <a href="#" class="bg-blue-600 text-white py-2 px-4 hover:bg-blue-500 text-center">Try free for 14
+                        <a href="#" class="bg-blue-600 text-white py-2 px-4 hover:bg-blue-500 text-center">Try free for
+                            14
                             days</a>
                         <p>or <a href="" class="underline text-blue-700">Purchase now</a></p>
                         <hr class="bg-black-500 w-10">
@@ -103,15 +224,17 @@
                             <h1 class="font-bold">Plan highlights</h1>
                             <ul class="">
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Remote account wipe</li>
-                                <li><span class="text-blue-700 text-xl">&#10003;</span> Send files up to 100 GB with Dropbox
+                                <li><span class="text-blue-700 text-xl">&#10003;</span> Send files up to 100 GB with
+                                    Dropbox
                                     Transfer</li>
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Mobile offline folders</li>
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Document watermarking</li>
-                                <li><span class="text-blue-700 text-xl">&#10003;</span> Priority email and live chat support
+                                <li><span class="text-blue-700 text-xl">&#10003;</span> Priority email and live chat
+                                    support
                                 </li>
                             </ul>
                         </div>
-    
+
                     </div>
                 </div>
                 <div class="border border-gray-300">
@@ -124,14 +247,17 @@
                         <h2 class="font-bold text-lg">$19.99</h2>
                         <p class="text-gray-500">/ month</p>
                         <ul class="flex flex-col space-y-2">
-                            <p class="flex space-x-2"><img src="./images/profile.svg" alt="" srcset=""> <span>1 user</span>
+                            <p class="flex space-x-2"><img src="./images/profile.svg" alt="" srcset=""> <span>1
+                                    user</span>
                             </p>
-                            <p class="flex space-x-2"><img src="./images/folder.svg" alt="" srcset=""> <span>3 TB of secure
+                            <p class="flex space-x-2"><img src="./images/folder.svg" alt="" srcset=""> <span>3 TB of
+                                    secure
                                     storage</span></p>
                             <p class="flex space-x-2"><img src="./images/pen.svg" alt="" srcset=""> <span>Premium
                                     productivity features and simple, secure file sharing</span></p>
                         </ul>
-                        <a href="#" class="bg-blue-600 text-white py-2 px-4 hover:bg-blue-500 text-center">Try free for 14
+                        <a href="#" class="bg-blue-600 text-white py-2 px-4 hover:bg-blue-500 text-center">Try free for
+                            14
                             days</a>
                         <p>or <a href="" class="underline text-blue-700">Purchase now</a></p>
                         <hr class="bg-black-500 w-10">
@@ -139,15 +265,17 @@
                             <h1 class="font-bold">Plan highlights</h1>
                             <ul class="">
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Remote account wipe</li>
-                                <li><span class="text-blue-700 text-xl">&#10003;</span> Send files up to 100 GB with Dropbox
+                                <li><span class="text-blue-700 text-xl">&#10003;</span> Send files up to 100 GB with
+                                    Dropbox
                                     Transfer</li>
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Mobile offline folders</li>
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Document watermarking</li>
-                                <li><span class="text-blue-700 text-xl">&#10003;</span> Priority email and live chat support
+                                <li><span class="text-blue-700 text-xl">&#10003;</span> Priority email and live chat
+                                    support
                                 </li>
                             </ul>
                         </div>
-    
+
                     </div>
                 </div>
                 <div class="border border-gray-300">
@@ -160,14 +288,17 @@
                         <h2 class="font-bold text-lg">$19.99</h2>
                         <p class="text-gray-500">/ month</p>
                         <ul class="flex flex-col space-y-2">
-                            <p class="flex space-x-2"><img src="./images/profile.svg" alt="" srcset=""> <span>1 user</span>
+                            <p class="flex space-x-2"><img src="./images/profile.svg" alt="" srcset=""> <span>1
+                                    user</span>
                             </p>
-                            <p class="flex space-x-2"><img src="./images/folder.svg" alt="" srcset=""> <span>3 TB of secure
+                            <p class="flex space-x-2"><img src="./images/folder.svg" alt="" srcset=""> <span>3 TB of
+                                    secure
                                     storage</span></p>
                             <p class="flex space-x-2"><img src="./images/pen.svg" alt="" srcset=""> <span>Premium
                                     productivity features and simple, secure file sharing</span></p>
                         </ul>
-                        <a href="#" class="bg-blue-600 text-white py-2 px-4 hover:bg-blue-500 text-center">Try free for 14
+                        <a href="#" class="bg-blue-600 text-white py-2 px-4 hover:bg-blue-500 text-center">Try free for
+                            14
                             days</a>
                         <p>or <a href="" class="underline text-blue-700">Purchase now</a></p>
                         <hr class="bg-black-500 w-10">
@@ -175,15 +306,17 @@
                             <h1 class="font-bold">Plan highlights</h1>
                             <ul class="">
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Remote account wipe</li>
-                                <li><span class="text-blue-700 text-xl">&#10003;</span> Send files up to 100 GB with Dropbox
+                                <li><span class="text-blue-700 text-xl">&#10003;</span> Send files up to 100 GB with
+                                    Dropbox
                                     Transfer</li>
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Mobile offline folders</li>
                                 <li><span class="text-blue-700 text-xl">&#10003;</span> Document watermarking</li>
-                                <li><span class="text-blue-700 text-xl">&#10003;</span> Priority email and live chat support
+                                <li><span class="text-blue-700 text-xl">&#10003;</span> Priority email and live chat
+                                    support
                                 </li>
                             </ul>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
@@ -206,19 +339,23 @@
         </div>
         <!-- Do more with Dropbox -->
         <div class="container m-auto">
-            <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-red-700">Do more with Dropbox Business
+            <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-red-700">Do more with Dropbox
+                Business
             </h1>
-            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:auto-cols-auto gap-5 justify-center items-center ">
+            <ul
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:auto-cols-auto gap-5 justify-center items-center ">
                 <li class="p-10 space-y-3">
                     <img class="w-9/12 mx-auto" src="./images/do_centralize.png" alt="" srcset="">
                     <h1 class="font-bold text-xl text-blue-700">Centralize team content</h1>
-                    <p>Create, store, and share cloud content from Google Docs, Sheets, and Slides, Microsoft Office files,
+                    <p>Create, store, and share cloud content from Google Docs, Sheets, and Slides, Microsoft Office
+                        files,
                         and Dropbox Paper alongside traditional files in Dropbox.</p>
                 </li>
                 <li class="p-10 space-y-3">
                     <img class="w-9/12 mx-auto" src="./images/do_transform.png" alt="" srcset="">
                     <h1 class="font-bold text-xl text-blue-700">Transform your folders</h1>
-                    <p>Dropbox Spaces brings your files and cloud content together, so that your PowerPoints can live next
+                    <p>Dropbox Spaces brings your files and cloud content together, so that your PowerPoints can live
+                        next
                         to your Google Docs, Trello boards, and whatever tools your team wants to use.</p>
                 </li>
                 <li class="p-10 space-y-3">
@@ -229,7 +366,8 @@
                 <li class="p-10 space-y-3">
                     <img class="w-9/12 mx-auto" src="./images/do_fav_tools.png" alt="" srcset="">
                     <h1 class="font-bold text-xl text-blue-700">Use your favorite collaboration tools</h1>
-                    <p>Keep your team’s files and the conversations about them in the same place by connecting tools like
+                    <p>Keep your team’s files and the conversations about them in the same place by connecting tools
+                        like
                         Slack and Zoom.</p>
                 </li>
                 <li class="p-10 space-y-3">
@@ -241,13 +379,15 @@
                 <li class="p-10 space-y-3">
                     <img class="w-9/12 mx-auto" src="./images/do_collaborate.png" alt="" srcset="">
                     <h1 class="font-bold text-xl text-blue-700">Get peace of mind</h1>
-                    <p>A secure, distributed infrastructure—plus admin tools for control and visibility—keep your company’s
+                    <p>A secure, distributed infrastructure—plus admin tools for control and visibility—keep your
+                        company’s
                         data safe on Dropbox.</p>
                 </li>
             </ul>
         </div>
         <!-- Bring the smart workspace to your business -->
-        <section class="py-40 bg-blue-200 flex justify-around items-center">
+        <section
+            class="py-20 sm:py-40 bg-blue-200 flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-around text-center items-center">
             <h1 class="font-extrabold text-red-800 text-3xl sm:text-4xl md:text-5xl lg:6xl">Bring the smart workspace to
                 your business</h1>
             <a href="#" class="bg-white py-2 px-4 hover:bg-gray-200">Start your free trial</a>
@@ -357,7 +497,7 @@
                 content.classList.toggle("hide")
             })
         })
-        
+
     </script>
 </body>
 
