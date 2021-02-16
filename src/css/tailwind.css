@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+	@apply flex justify-center items-center h-screen;
+}
+.card {
+	@apply p-20;
+}
